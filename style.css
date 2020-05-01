@@ -52,11 +52,21 @@ header{
   transition-duration: 500ms;
 }
 
+.navigation-bar.different_color a {
+  color: black;
+}
+
 .navigation-bar a:link{
   color: #e65f78;
 }
 
 .navigation-bar a:hover{
+  color: #00B9FB;
+  font-size: 20px;
+  text-decoration: inherit;
+}
+
+.navigation-bar .active{
   color: #00B9FB;
   font-size: 20px;
   text-decoration: inherit;
@@ -91,15 +101,15 @@ header{
 }
 
 .intro{
-  font-size: 32pt;
-  animation: type 2s steps(22);
+  font-size: 36pt;
+  animation: type1 2s steps(22);
   overflow: hidden;
   white-space: nowrap;
-  font-family: consolas;
+  font-family: "Madefor-Display";
   border-right: 4px solid white;
   width: 21ch;
 }
-@keyframes type {
+@keyframes type1 {
   0% {
     width: 0ch;
   }
@@ -108,20 +118,14 @@ header{
   }
 }
 
-
 /* FOOTER */
 
 .footer{
   bottom: 0px;
-  /* background: white;
-  border-radius: 30px;
-  border: 2px solid #00B9FB; */
   position: fixed;
   text-align: left;
   bottom: 3%;
   left: 3%;
-  /* outline-style: solid;
-  outline-color: #00B9FB; */
 }
 
 .footer ul {
@@ -162,19 +166,40 @@ header{
   transform: scale(1.5);
 }
 
+/* PROFLIE PAGE */
 .profile{
   color: white;
   background: white;
-  height: 100%;
+  height: 80%;
   width: 100%;
   padding: 20px;
   display: flex;
+  font-family: Raleway, sans-serif;
   flex-direction: row;
+}
+
+.profile-title {
+  height: 10%;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-family: Pacifico;
+  text-transform: uppercase;
+  color: #00B9FB;
+}
+
+.profile-title h2{
+  font-size: 54px;
+  font-style: italic;
+  font-weight: 200;
+  line-height: 1.1;
 }
 
 .experiences{
   color: gray;
-  background: white;
+  background: gray;
   height: 100%;
   width: 100%;
   padding: 20px;
