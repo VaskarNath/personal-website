@@ -1,7 +1,6 @@
 var profile = document.getElementsByClassName('profile-link');
 var nav = document.getElementsByClassName("nav");
 var pages = document.getElementsByClassName("page");
-window.location.hash = "#home";
 var navigation_bar = document.getElementsByClassName('navigation-bar');
 var navigation_bar_rect = navigation_bar[0].getBoundingClientRect();
 pages_rect = [];
@@ -13,10 +12,6 @@ for (i = 0; i < pages.length; i++){
   pages_rect_bottom.push(pages_rect[i].bottom + window.scrollY )
   console.log(pages_rect_top);
 }
-
-window.onload = function(){window.scrollTo(0, 0);}
-
-
 
 window.onresize = reportWindowSize;
 
