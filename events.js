@@ -1,31 +1,38 @@
 var profile = document.getElementsByClassName('profile-link');
 var nav = document.getElementsByClassName("nav");
 var pages = document.getElementsByClassName("page");
+window.location.hash = "#home";
 var navigation_bar = document.getElementsByClassName('navigation-bar');
 var navigation_bar_rect = navigation_bar[0].getBoundingClientRect();
 pages_rect = [];
+pages_rect_top = [];
+pages_rect_bottom = [];
+for (i = 0; i < pages.length; i++){
+  pages_rect.push(pages[i].getBoundingClientRect());
+  pages_rect_top.push(pages_rect[i].top + window.scrollY);
+  pages_rect_bottom.push(pages_rect[i].bottom + window.scrollY )
+  console.log(pages_rect_top);
+}
+
+window.onload = function(){window.scrollTo(0, 0);}
+
+
 
 window.onresize = reportWindowSize;
+
 function reportWindowSize(){
-  scrollTo(0, 0);
-  console.log("works");
-  window.scrollTo(0,0);
-  location.reload();
-  profile = document.getElementsByClassName('profile-link');
-  nav = document.getElementsByClassName("nav");
-  pages = document.getElementsByClassName("page");
-  navigation_bar = document.getElementsByClassName('navigation-bar');
-  navigation_bar_rect = navigation_bar[0].getBoundingClientRect();
   pages_rect = [];
-  profile_rect = profile_page[0].getBoundingClientRect();
+  pages_rect_top = [];
+  pages_rect_bottom = [];
   for (i = 0; i < pages.length; i++){
     pages_rect.push(pages[i].getBoundingClientRect());
+    pages_rect_top.push(pages_rect[i].top + window.scrollY);
+    pages_rect_bottom.push(pages_rect[i].bottom + window.scrollY )
+    console.log(pages_rect_top);
   }
 }
 
-for (i = 0; i < pages.length; i++){
-  pages_rect.push(pages[i].getBoundingClientRect());
-}
+
 var old_href = window.location.hash;
 window.location.hash = "#home";
 for (i = 0; i < nav.length; i++){
@@ -48,22 +55,22 @@ function change_scroll0(){
 function change_scroll1(){
   console.log(document.documentElement.clientHeight);
   var style = window.getComputedStyle(navigation_bar[0]);
-  scrollTo(0, pages_rect[1].top - navigation_bar_rect.height - (0.06 * document.documentElement.clientHeight));
+  scrollTo(0, pages_rect_top[1] - navigation_bar_rect.height - (0.06 * document.documentElement.clientHeight));
   return false;
 }
 
 function change_scroll2(){
-  scrollTo(0, pages_rect[2].top);
+  scrollTo(0, pages_rect_top[2]);
   return false;
 }
 
 function change_scroll3(){
-  scrollTo(0, pages_rect[3].top);
+  scrollTo(0, pages_rect_top[3]);
   return false;
 }
 
 function change_scroll4(){
-  scrollTo(0, pages_rect[4].top);
+  scrollTo(0, pages_rect_top[4]);
   return false;
 }
 
@@ -89,19 +96,19 @@ function activePage(){
   var offset = navigation_bar_rect.height + (0.065 * document.documentElement.clientHeight);
   var j = document.documentElement.scrollTop;
   switch (true) {
-    case (pages_rect[0].top < j && j < pages_rect[0].bottom - offset):
+    case (pages_rect_top[0] < j && j < pages_rect_bottom[0] - offset):
       window.location.hash = "#home";
       break;
-    case (pages_rect[1].top - offset < j && j < pages_rect[1].bottom - offset):
+    case (pages_rect_top[1] - offset < j && j < pages_rect_bottom[1] - offset):
       window.location.hash = "#profile";
       break;
-    case (pages_rect[2].top - offset < j && j < pages_rect[2].bottom - offset):
+    case (pages_rect_top[2] - offset < j && j < pages_rect_bottom[2] - offset):
       window.location.hash = "#experiences";
       break;
-    case (pages_rect[3].top - offset< j && j < pages_rect[3].bottom - offset):
+    case (pages_rect_top[3] - offset< j && j < pages_rect_bottom[3] - offset):
       window.location.hash = "#projects";
       break;
-    case (pages_rect[4].top - offset < j && j < pages_rect[4].bottom):
+    case (pages_rect_top[4] - offset < j && j < pages_rect_bottom[4]):
       window.location.hash = "#contact";
       break;
     default:
@@ -110,18 +117,15 @@ function activePage(){
 }
 
 function scrollingFunction() {
-  if ((document.documentElement.scrollTop > (pages_rect[2].top - navigation_bar_rect.height)
-     &&  document.documentElement.scrollTop <  pages_rect[2].bottom - (navigation_bar_rect.height))
-   || (document.documentElement.scrollTop > (pages_rect[4].top - navigation_bar_rect.height)
-      &&  document.documentElement.scrollTop <  pages_rect[4].bottom - (navigation_bar_rect.height))){
+  if ((document.documentElement.scrollTop > (pages_rect_top[2] - navigation_bar_rect.height)
+     &&  document.documentElement.scrollTop <  pages_rect_bottom[2] - (navigation_bar_rect.height))
+   || (document.documentElement.scrollTop > (pages_rect_top[4] - navigation_bar_rect.height)
+      &&  document.documentElement.scrollTop <  pages_rect_bottom[4] - (navigation_bar_rect.height))){
     document.getElementsByClassName("navigation-bar")[0].classList.add("different_color");
   } else{
     document.getElementsByClassName("navigation-bar")[0].classList.remove("different_color");
   }
 }
-
-window.onunload = function(){ window.scrollTo(0,0);}
-
 
 var intro = document.getElementsByClassName('intro')[0];
 var intro1 = document.getElementsByClassName('intro1')[0];

@@ -1,6 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(https://fonts.googleapis.com/css?family=Marck+Script);
 html, body { height: 100%; width: 100%; margin: 0; scroll-behavior: smooth; }
+
+
 
 body{
   background: black;
@@ -23,12 +26,45 @@ header{
   text-align: right;
 }
 
+/* LOGO */
+
+.logo{
+  font-family: Marck Script;
+  font-size: 25px;
+  left: 5%;
+  top: 1%;
+  list-style-type: none;
+  position: fixed;
+  overflow: hidden;
+}
+
+.logo li{
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+
+.logo a {
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  line-height: 20px;
+  text-decoration: none;
+  transition-duration: 500ms;
+}
+
+.logo a:hover {
+  color: #00B9FB;
+  font-size: 30px;
+  text-decoration: inherit;
+}
+
 /* NAVIGATION BAR */
 
 .navigation-bar{
   /* background: #3db2e1; */
   font-family: Raleway, sans-serif;
-  border-radius: 5px;
   right: 5%;
   top: 3%;
   list-style-type: none;
