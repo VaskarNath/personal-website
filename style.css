@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
 html, body { height: 100%; width: 100%; margin: 0; scroll-behavior: smooth; }
 
 body{
@@ -56,6 +58,16 @@ header{
   color: black;
 }
 
+.navigation-bar.different_color a:hover {
+  color: #e65f78;
+}
+
+.navigation-bar.different_color .active {
+  color: #e65f78;
+  font-size: 20px;
+  text-decoration: inherit;
+}
+
 .navigation-bar a:link{
   color: #e65f78;
 }
@@ -101,21 +113,68 @@ header{
 }
 
 .intro{
-  font-size: 36pt;
-  animation: type1 2s steps(22);
+  display: none;
+}
+
+.intro1{
+  display: none;
+}
+
+.intro.display, .intro1.display{
+  font-size: 4vw;
+  display: flex;
   overflow: hidden;
   white-space: nowrap;
-  font-family: "Madefor-Display";
+  font-family: "Permanent Marker";
+  word-wrap: break-word;
   border-right: 4px solid white;
-  width: 21ch;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.intro{
+  animation: type1 6s steps(25);
+  width: 15.3ch;
 }
 @keyframes type1 {
   0% {
     width: 0ch;
   }
-  100% {
-    width: 21ch;
+  33% {
+    width: 15.3ch;
   }
+  66% {
+    width: 15.3ch;
+  }
+  100%{
+    width: 0ch;
+  }
+
+}
+
+
+.intro1.display{
+  animation: type2 6s steps(25);
+  width: 17.55ch;
+  font-size: 4vw;
+}
+@keyframes type2 {
+  0% {
+    width: 0ch;
+  }
+  33% {
+    width: 17.55ch;
+  }
+  66% {
+    width: 17.55ch;
+  }
+  100%{
+    width: 0ch;
+  }
+}
+
+.intro.blinker, .intro1.blinker {
+  border-right: 4px solid black;
 }
 
 /* FOOTER */
@@ -169,7 +228,7 @@ header{
 /* PROFLIE PAGE */
 .profile{
   color: white;
-  background: white;
+  background: linear-gradient(to top right, #29323c, #485563);
   height: 80%;
   width: 100%;
   padding: 20px;
@@ -199,7 +258,7 @@ header{
 
 .experiences{
   color: gray;
-  background: gray;
+  background: linear-gradient(to top, #96deda, #ffffff);
   height: 100%;
   width: 100%;
   padding: 20px;
@@ -209,7 +268,7 @@ header{
 
 .projects{
   color: gray;
-  background: black;
+  background: linear-gradient(to top, #ffc3a0, #ffafbd);
   height: 100%;
   width: 100%;
   padding: 20px;
@@ -219,7 +278,7 @@ header{
 
 .contact{
   color: gray;
-  background: #e65f78;
+  background: #ffffff;
   height: 100%;
   width: 100%;
   padding: 20px;
