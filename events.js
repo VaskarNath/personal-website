@@ -131,7 +131,7 @@ var delay = setTimeout(loop, 2000);
 
 
 first_intro = true;
-bool = false;
+bool = true;
 
 
 var k = 4;
