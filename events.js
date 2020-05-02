@@ -13,6 +13,10 @@ for (i = 0; i < pages.length; i++){
   console.log(pages_rect_top);
 }
 
+window.mobileCheck = function(){
+  alert("Full functionality of browser is not designed for mobile yet. Please open on a desktop/laptop browser!");
+}
+
 window.onresize = reportWindowSize;
 
 function reportWindowSize(){
