@@ -24,8 +24,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-
-
 html, body { height: 100%; width: 100%; margin: 0; scroll-behavior: smooth; }
 
 
@@ -127,10 +125,6 @@ header{
   color: #e65f78;
   font-size: 20px;
   text-decoration: inherit;
-}
-
-.navigation-bar a:link{
-  color: #e65f78;
 }
 
 .navigation-bar a:hover{

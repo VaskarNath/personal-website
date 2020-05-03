@@ -33,7 +33,6 @@ function reportWindowSize(){
 
 
 var old_href = window.location.hash;
-window.location.hash = "#home";
 for (i = 0; i < nav.length; i++){
   if (nav[i].hash == old_href){
     nav[i].classList.add("active");
