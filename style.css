@@ -284,7 +284,7 @@ header{
 .profile{
   color: white;
   background: linear-gradient(to top right, #29323c, #485563);
-  height: 80%;
+  height: 65%;
   width: 100%;
   padding: 20px;
   display: flex;
@@ -302,22 +302,23 @@ header{
   margin-top: 10px;
   align-items: center;
   justify-content: center;
-  font-family: Raleway, sans-serif;
-  color: gray;
+  font-family: "Permanent Marker";
+  color: white;
 }
 
 .description p{
   padding: 20px;
   text-align: center;
-  font-size: 3 vw;
+  font-size: 24pt;
   border-bottom: solid gray 1px;
-  width: 80ch;
+  font-family: "Permanent Marker";
+  width: 60ch;
 }
 
 .description-details{
   height: 100%;
-  width: 80ch;
-  margin-top: 5%;
+  width: 100ch;
+  margin-top: 3%;
   align-items: center;
   justify-content: center;
   vertical-align: top;
@@ -327,19 +328,36 @@ header{
 
 .about-me{
   height: 100%;
-  width: 33%;
+  width: 75%;
+}
+
+.about-me h3, .details h3{
+  font-size: 28px;
+  font-weight: 300;
 }
 
 .about-me p{
+  line-height: 1.6;
   font-size: 12pt;
 
+}
+
+.details{
+  width: 60%;
+}
+.details strong{
+  font-size: 16pt;
+}
+
+.details p {
+  margin: 5px 0 8px 0;
 }
 
 .face-photo{
   height: 100%;
 }
 .face-photo img{
-  margin: 0vw 4vw;
+  margin: 0vw 4vw 0 2vw;
   width: 15vw;
   height: 15vw;
   border-radius: 150px;
