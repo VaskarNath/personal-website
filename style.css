@@ -323,7 +323,6 @@ header{
   vertical-align: top;
   display: flex;
   flex-direction: row;
-  font-family: 'Open Sans', sans-serif !important;
 }
 
 .about-me{
@@ -332,9 +331,7 @@ header{
 }
 
 .about-me p{
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-weight: 300;
+  font-size: 12pt;
 
 }
 
