@@ -77,12 +77,6 @@ header{
   transition-duration: 500ms;
 }
 
-.logo a:hover {
-  color: #00B9FB;
-  font-size: 30px;
-  text-decoration: inherit;
-}
-
 /* NAVIGATION BAR */
 
 .navigation-bar{
@@ -113,11 +107,11 @@ header{
   transition-duration: 500ms;
 }
 
-.navigation-bar.different_color a {
+.navigation-bar.different_color a, .logo.different_color a {
   color: black;
 }
 
-.navigation-bar.different_color a:hover {
+.navigation-bar.different_color a:hover, .logo.different_color a:hover {
   color: #e65f78;
 }
 
@@ -127,10 +121,14 @@ header{
   text-decoration: inherit;
 }
 
-.navigation-bar a:hover{
+.navigation-bar a:hover, .logo a:hover {
   color: #00B9FB;
   font-size: 20px;
   text-decoration: inherit;
+}
+
+.logo a:hover{
+  font-size: 30px;
 }
 
 .navigation-bar .active{

@@ -45,6 +45,10 @@ nav[2].addEventListener("click", change_scroll2);
 nav[3].addEventListener("click", change_scroll3);
 nav[4].addEventListener("click", change_scroll4);
 
+// Adding logo click scroll to homepage functionality
+logo_button = document.getElementsByClassName("logo-button");
+logo_button[0].addEventListener("click", change_scroll0);
+
 function change_scroll0(){
   scrollTo(0, pages_rect[0].top);
   return false;
@@ -120,8 +124,10 @@ function scrollingFunction() {
    || (document.documentElement.scrollTop > (pages_rect_top[4] - navigation_bar_rect.height)
       &&  document.documentElement.scrollTop <  pages_rect_bottom[4] - (navigation_bar_rect.height))){
     document.getElementsByClassName("navigation-bar")[0].classList.add("different_color");
+    document.getElementsByClassName('logo')[0].classList.add("different_color");
   } else{
     document.getElementsByClassName("navigation-bar")[0].classList.remove("different_color");
+    document.getElementsByClassName('logo')[0].classList.remove("different_color");
   }
 }
 
