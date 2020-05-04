@@ -284,7 +284,7 @@ header{
 .profile{
   color: white;
   background: linear-gradient(to top right, #29323c, #485563);
-  height: 65%;
+  height: 70%;
   width: 100%;
   padding: 20px;
   display: flex;
@@ -310,7 +310,7 @@ header{
   padding: 20px;
   text-align: center;
   font-size: 24pt;
-  border-bottom: solid gray 1px;
+  border-bottom: solid  #e65f78 1px;
   font-family: "Permanent Marker";
   width: 60ch;
 }
@@ -328,12 +328,13 @@ header{
 
 .about-me{
   height: 100%;
-  width: 75%;
+  width: 70%;
 }
 
 .about-me h3, .details h3{
   font-size: 28px;
   font-weight: 300;
+  color: #e65f78;
 }
 
 .about-me p{
@@ -346,6 +347,7 @@ header{
   width: 60%;
 }
 .details strong{
+  color:  #e65f78;
   font-size: 16pt;
 }
 
@@ -361,7 +363,7 @@ header{
   width: 15vw;
   height: 15vw;
   border-radius: 150px;
-  border: solid black 10px;
+  border: solid  #e65f78 10px;
 
 }
 
