@@ -39,15 +39,14 @@ for (i = 0; i < nav.length; i++){
   }
 }
 
-nav[0].addEventListener("click", change_scroll0);
-nav[1].addEventListener("click", change_scroll1);
-nav[2].addEventListener("click", change_scroll2);
-nav[3].addEventListener("click", change_scroll3);
-nav[4].addEventListener("click", change_scroll4);
+nav[1].addEventListener("click", change_scroll0);
+nav[2].addEventListener("click", change_scroll1);
+nav[3].addEventListener("click", change_scroll2);
+nav[4].addEventListener("click", change_scroll3);
+nav[5].addEventListener("click", change_scroll4);
 
 // Adding logo click scroll to homepage functionality
-logo_button = document.getElementsByClassName("logo-button");
-logo_button[0].addEventListener("click", change_scroll0);
+nav[0].addEventListener("click", change_scroll0);
 
 function change_scroll0(){
   scrollTo(0, pages_rect[0].top);

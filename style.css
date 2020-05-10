@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
 @import url(https://fonts.googleapis.com/css?family=Marck+Script);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 
 html {
@@ -39,7 +40,7 @@ body{
 
 header{
   background: #1F2833;
-  background-image: url("homepage1.jpg");
+  background-image: url("images/homepage1.jpg");
   background-size: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -263,15 +264,15 @@ header{
 }
 
 .linkedin a{
-  background-image: url("linkedin.png");
+  background-image: url("images/linkedin.png");
 }
 
 .github a{
-  background-image: url("github.png");
+  background-image: url("images/github.png");
 }
 
 .email a{
-  background-image: url("email.png");
+  background-image: url("images/email.png");
 }
 
 .linkedin a:hover, .github a:hover, .email a:hover{
@@ -387,15 +388,123 @@ header{
   line-height: 1.1;
 }
 
+/* EXPERIENCES */
+
 .experiences{
   color: gray;
-  background: linear-gradient(to top, #96deda, #ffffff);
-  height: 100%;
+  background: #F3EFE0;
+  /* linear-gradient(to top, #96deda, #ffffff); */
+  height: 160%;
   width: 100%;
-  padding: 20px;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  padding-bottom: 18px;
+}
+
+.education .section {
+  height: 50%;
+}
+
+/* EDUCATION */
+.education{
+  margin-top: 3px;
+  align-items: center;
+  height: 60%;
+  width: 55%;
+  border-bottom: solid  rgb(114, 120, 120) 0.5px;
+}
+
+.education h2, .careers h2{
+  color: #22A39F;
+  font-size: 28px;
+  font-weight: lighter;
+}
+
+.careers{
+  margin-top: 10px;
+  align-items: center;
+  height: 100%;
+  width: 55%;
+}
+
+.education .section, .careers .section{
   display: flex;
   flex-direction: row;
 }
+
+.caption div{
+  display: flex;
+  flex-direction: row;
+}
+
+.section .label {
+  align-items: left;
+  align-content: left;
+  text-align: left;
+}
+
+.glyphicon {
+  margin-right: 4px;
+  color: #22A39F;
+}
+
+.education .section .label h2, .careers .section .label h2{
+  font-size: 18px;
+  color: rgb(67, 66, 66);
+  font-weight: 700;
+
+}
+
+.education .section .label p, .careers .section .label p{
+  font-size: 15px;
+  color: #22A39F;
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  text-size-adjust:100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.education .section .caption h3, .careers .section .caption h3{
+  font-size: 15px;
+  color: rgb(67, 66, 66);
+  font-weight: 700;
+}
+
+.education .section .caption p, .careers .section .caption p,
+ .education .section .caption span, .careers .section .caption span{
+  font-size: 15px;
+  line-height: 24.6px;
+  color: rgb(67, 66, 66);
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  text-size-adjust:100%;
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+
+}
+
+
+.education .section .label, .careers .section .label{
+  font-size: 0.9vw;
+  width: 30%;
+}
+
+.education .section .caption, .careers .section .caption{
+  width: 70%;
+  margin-left: 6vw;
+}
+
+.section h2{
+
+}
+
+/* CAREERS */
+
 
 .projects{
   color: gray;
