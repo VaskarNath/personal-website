@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
 @import url(https://fonts.googleapis.com/css?family=Marck+Script);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 
 
 html {
@@ -392,7 +393,7 @@ header{
 
 .experiences{
   color: gray;
-  background: #F3EFE0;
+  background: #FFFFFF;
   /* linear-gradient(to top, #96deda, #ffffff); */
   height: 160%;
   width: 100%;
@@ -402,108 +403,41 @@ header{
   align-items: center;
 }
 
-.section {
-  padding-bottom: 18px;
+.education, .experience{
+  display: flex;
+  flex-direction: column;
 }
 
-.education .section {
-  height: 50%;
-}
-
-/* EDUCATION */
-.education{
-  margin-top: 3px;
-  align-items: center;
+.education {
   height: 60%;
-  width: 55%;
-  border-bottom: solid  rgb(114, 120, 120) 0.5px;
+  width: 60%;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  border-bottom-width: 1px;
+  margin-top: 50px;
 }
 
-.education h2, .careers h2{
-  color: #22A39F;
-  font-size: 28px;
-  font-weight: lighter;
-}
-
-.careers{
-  margin-top: 10px;
-  align-items: center;
+.experience {
+  margin-top: 2%;
   height: 100%;
-  width: 55%;
+  width: 60%;
 }
 
-.education .section, .careers .section{
-  display: flex;
-  flex-direction: row;
-}
-
-.caption div{
-  display: flex;
-  flex-direction: row;
-}
-
-.section .label {
-  align-items: left;
-  align-content: left;
+.title{
+  height: 10%;
+  width: 100%;
   text-align: left;
+  color: rgba(0, 0, 0, 0.9);
+  margin-left: 2%;
 }
 
-.glyphicon {
-  margin-right: 4px;
-  color: #22A39F;
+.title h1{
+  font: system-ui;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgb(25, 25, 25);
+  font-weight: 400;
 }
-
-.education .section .label h2, .careers .section .label h2{
-  font-size: 18px;
-  color: rgb(67, 66, 66);
-  font-weight: 700;
-
-}
-
-.education .section .label p, .careers .section .label p{
-  font-size: 15px;
-  color: #22A39F;
-  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-  text-size-adjust:100%;
-  font-family: "Open Sans", sans-serif;
-}
-
-.education .section .caption h3, .careers .section .caption h3{
-  font-size: 15px;
-  color: rgb(67, 66, 66);
-  font-weight: 700;
-}
-
-.education .section .caption p, .careers .section .caption p,
- .education .section .caption span, .careers .section .caption span{
-  font-size: 15px;
-  line-height: 24.6px;
-  color: rgb(67, 66, 66);
-  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-  text-size-adjust:100%;
-  font-family: "Open Sans", sans-serif;
-  padding: 0;
-  margin: 0;
-  line-height: 1.6;
-
-}
-
-
-.education .section .label, .careers .section .label{
-  font-size: 0.9vw;
-  width: 30%;
-}
-
-.education .section .caption, .careers .section .caption{
-  width: 70%;
-  margin-left: 6vw;
-}
-
-.section h2{
-
-}
-
-/* CAREERS */
 
 
 .projects{
