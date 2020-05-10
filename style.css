@@ -139,7 +139,83 @@ header{
   text-decoration: inherit;
 }
 
-/* RESPONSTIVE NAVIGATION BAR */
+/* RESUME DOWNLOAD BUTTON */
+
+.button1{
+  background: white;
+  border: black 1px solid;
+  font-family: Raleway, sans-serif;
+  height: 55px;
+  width: 160px;
+  right: 10%;
+  top: 15%;
+  list-style-type: none;
+  position: fixed;
+  overflow: hidden;
+  border-radius: 50px;
+  align-items: bottom;
+  opacity: 1;
+  animation: reappear 0.5s;
+}
+@keyframes reappear {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+
+}
+.button1.no-display{
+  animation: dissapear 0.2s;
+  opacity: 0;
+}
+@keyframes dissapear {
+  0% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+
+}
+
+
+.button1 div{
+  align-items: bottom;
+}
+
+.button1 a{
+  height: 100%;
+  width: 100%;
+}
+
+.button1 li {
+  align-items: bottom;
+  text-align: center;
+  margin-top: 3px;
+  animation: bounce 0.9s infinite;
+}
+@keyframes bounce {
+  0% {
+    margin-top: 3px;
+  }
+  50%{
+    margin-top: 7px;
+  }
+  100%{
+    margin-top: 3px;
+  }
+
+}
+
+.button1 img{
+  height: 70%;
+  width: 30%;
+}
+
+
+/* RESPONSIVE NAVIGATION BAR */
 
 @media screen and (max-width: 650px){
 
@@ -395,9 +471,9 @@ header{
   color: gray;
   background: #FFFFFF;
   /* linear-gradient(to top, #96deda, #ffffff); */
-  height: 160%;
+  height: 140%;
   width: 100%;
-  padding: 13px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -407,25 +483,13 @@ header{
     "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.education, .experience{
+.experience-page{
+  width: 45%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.education {
-  height: 60%;
-  width: 60%;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(0, 0, 0, 0.15);
-  border-bottom-width: 1px;
-  margin-top: 50px;
-}
-
-.experience {
-  margin-top: 2%;
-  height: 100%;
-  width: 60%;
-}
 
 .title{
   height: 10%;
@@ -433,16 +497,89 @@ header{
   text-align: left;
   color: rgba(0, 0, 0, 0.9);
   margin-left: 2%;
+  margin-bottom: 2%;
 }
 
 .title h1{
+  padding-top: 4px;
   font: system-ui;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 28px;
   color: rgb(25, 25, 25);
   font-weight: 400;
 }
 
+
+.experience-page sec{
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+  margin-bottom: 5%;
+}
+
+.experience-page .divide{
+  margin-bottom: 0;
+}
+
+.experience-page  sec img{
+  height: 55px;
+  width: 55px;
+  margin-right: 0;
+  border-radius: 2px;
+}
+
+.experience-page  sec div{
+  height: 100%;
+  width: 90%;
+  margin-right: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-left: 10%;
+  display: inline-block;
+  align-content: top;
+}
+
+.divide{
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-bottom: 0;
+}
+
+.experience-page sec .last{
+  border-bottom: none;
+}
+
+.experience-page sec div h1{
+    margin: 0;
+    text-align: top;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+
+}
+
+.experience-page sec div h2{
+    margin: 0;
+    text-align: top;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.experience-page sec div p{
+    margin: 0;
+    text-align: top;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
 
 .projects{
   color: gray;

@@ -3,6 +3,7 @@ var nav = document.getElementsByClassName("nav");
 var pages = document.getElementsByClassName("page");
 var navigation_bar = document.getElementsByClassName('navigation-bar');
 var navigation_bar_rect = navigation_bar[0].getBoundingClientRect();
+var button1 = document.getElementsByClassName("button1")[0];
 pages_rect = [];
 pages_rect_top = [];
 pages_rect_bottom = [];
@@ -96,6 +97,7 @@ window.onscroll = function() {scrollingFunction(), activePage()};
 function activePage(){
   var offset = navigation_bar_rect.height + (0.065 * document.documentElement.clientHeight);
   var j = document.documentElement.scrollTop;
+  button1.classList.add("no-display");
   switch (true) {
     case (pages_rect_top[0] < j && j < pages_rect_bottom[0] - offset):
       window.location.hash = "#home";
@@ -105,6 +107,7 @@ function activePage(){
       break;
     case (pages_rect_top[2] - offset < j && j < pages_rect_bottom[2] - offset):
       window.location.hash = "#experiences";
+      button1.classList.remove("no-display");
       break;
     case (pages_rect_top[3] - offset< j && j < pages_rect_bottom[3] - offset):
       window.location.hash = "#projects";
