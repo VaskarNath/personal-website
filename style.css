@@ -85,6 +85,7 @@ header{
 .navigation-bar{
   /* background: #3db2e1; */
   font-family: Raleway, sans-serif;
+  font-weight: bolder;
   right: 5%;
   top: 3%;
   list-style-type: none;
@@ -143,7 +144,7 @@ header{
 /* RESUME DOWNLOAD BUTTON */
 
 .button1{
-  background: white;
+  background-color: white;
   border: black 1px solid;
   font-family: Raleway, sans-serif;
   height: 55px;
@@ -157,7 +158,6 @@ header{
   align-items: bottom;
   opacity: 1;
   animation: reappear 0.5s;
-  box-shadow: 3px 6px #888888;
 }
 @keyframes reappear {
   0% {
@@ -355,8 +355,9 @@ header{
 
 /* PROFLIE PAGE */
 .profile{
-  color: white;
-  background: linear-gradient(to top right, #29323c, #485563);
+  color:rgba(0, 0, 0, 0.9);
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
   height: 70%;
   width: 100%;
   padding: 20px;
@@ -365,6 +366,8 @@ header{
   justify-content: center;
   font-family: Raleway, sans-serif;
   flex-direction: column;
+  border-top: solid rgb(58, 194, 176) 10px;
+  border-bottom: solid rgb(58, 194, 176) 10px;
 }
 
 
@@ -376,14 +379,14 @@ header{
   align-items: center;
   justify-content: center;
   font-family: "Permanent Marker";
-  color: white;
 }
 
 .description p{
+  color: rgb(58, 194, 176);
   padding: 20px;
   text-align: center;
   font-size: 24pt;
-  border-bottom: solid  #e65f78 1px;
+  border-bottom: solid  rgba(0, 0, 0, 0.9) 1px;
   font-family: "Permanent Marker";
   width: 60ch;
 }
@@ -399,15 +402,16 @@ header{
   flex-direction: row;
 }
 
-.about-me{
+.about-me{ 
   height: 100%;
   width: 70%;
 }
 
 .about-me h3, .details h3{
+  font-family: "Permanent Marker";
   font-size: 28px;
   font-weight: 300;
-  color: #e65f78;
+  color: rgb(58, 194, 176);
 }
 
 .about-me p{
@@ -420,7 +424,7 @@ header{
   width: 60%;
 }
 .details strong{
-  color:  #e65f78;
+  color:  rgb(58, 194, 176);
   font-size: 16pt;
 }
 
@@ -436,7 +440,7 @@ header{
   width: 15vw;
   height: 15vw;
   border-radius: 150px;
-  border: solid  #e65f78 10px;
+  border: solid  rgb(58, 194, 176) 10px;
 }
 
 .details{
@@ -466,8 +470,13 @@ header{
 
 .experiences{
   color: gray;
-  background: rgb(218, 218, 218);
+  background: url("images/background1.jpg");
+  /* rgb(218, 218, 218); */
   /* linear-gradient(to top, #96deda, #ffffff); */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   height: 140%;
   width: 100%;
   padding: 20px;
@@ -482,13 +491,12 @@ header{
 
 .experience-page{
   border-radius: 3px;
-  background: #FFFFFF;
+  background-color: white;
+  border: outset #00B9FB 4px;
   width: 45%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 10px #888888;
-  border: 1px solid;
 }
 
 
@@ -530,7 +538,6 @@ header{
   width: 55px;
   margin-left: 3%;
   border-radius: 2px;
-  box-shadow: 2px 2px #888888;
 }
 
 .experience-page  sec div{
@@ -563,7 +570,6 @@ header{
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
-    text-shadow: 1px 1px #888888;
 }
 
 .experience-page sec div h2{
@@ -584,19 +590,59 @@ header{
     line-height: 20px;
 }
 
+
+/* PROJECTS */
+
+
 .projects{
   color: gray;
-  background: linear-gradient(to top, #ffc3a0, #ffafbd);
-  height: 100%;
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+  height: 80%;
   width: 100%;
   padding: 20px;
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
+  flex-direction: column;
+  border-top:  solid #e65f78 10px;
+  border-bottom: solid #e65f78 10px;
+  align-items: center;
+}
+
+.project-title{
+  background-color: none;
+  color: #e65f78;
+  font-family: "Permanent Marker";
+  height: 30%;
+  width: 100%;
+}
+
+.project-title h1{
+  margin: 2% 2%;
+  font-size: 36pt;
+  color: #e65f78;
+}
+
+.content{
+  background: black;
+  height: 14500px;
+  width: 100%;
+  overflow-y: scroll;
+}
+.content::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+.content div{
+  background: white;
+  height: 5000px;
 }
 
 .contact{
   color: gray;
-  background: #ffffff;
+  background: url("images/background2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   height: 100%;
   width: 100%;
   padding: 20px;
