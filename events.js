@@ -40,6 +40,25 @@ for (i = 0; i < nav.length; i++){
   }
 }
 
+var arrow = document.getElementById('arrow');
+arrow.addEventListener("click", change_scroll1);
+
+arrow.addEventListener('mouseenter', drop);
+arrow.addEventListener('mouseleave', undrop);
+
+function drop(){
+  if (arrow.classList.contains("undrop")){
+    arrow.classList.remove('undrop');
+  }
+  arrow.classList.add('hover');
+}
+
+function undrop(){
+  arrow.classList.remove('hover');
+  arrow.classList.add('undrop');
+}
+
+
 nav[1].addEventListener("click", change_scroll0);
 nav[2].addEventListener("click", change_scroll1);
 nav[3].addEventListener("click", change_scroll2);
@@ -57,7 +76,7 @@ function change_scroll0(){
 function change_scroll1(){
   console.log(document.documentElement.clientHeight);
   var style = window.getComputedStyle(navigation_bar[0]);
-  scrollTo(0, pages_rect_top[1] - navigation_bar_rect.height - (0.06 * document.documentElement.clientHeight));
+  scrollTo(0, pages_rect_top[1]);
   return false;
 }
 
@@ -97,7 +116,6 @@ window.onscroll = function() {scrollingFunction(), activePage()};
 function activePage(){
   var offset = navigation_bar_rect.height + (0.065 * document.documentElement.clientHeight);
   var j = document.documentElement.scrollTop;
-  button1.classList.add("no-display");
   switch (true) {
     case (pages_rect_top[0] < j && j < pages_rect_bottom[0] - offset):
       window.location.hash = "#home";
@@ -107,7 +125,6 @@ function activePage(){
       break;
     case (pages_rect_top[2] - offset < j && j < pages_rect_bottom[2] - offset):
       window.location.hash = "#experiences";
-      button1.classList.remove("no-display");
       break;
     case (pages_rect_top[3] - offset< j && j < pages_rect_bottom[3] - offset):
       window.location.hash = "#projects";
@@ -121,10 +138,10 @@ function activePage(){
 }
 
 function scrollingFunction() {
-  if ((document.documentElement.scrollTop > (pages_rect_top[2] - navigation_bar_rect.height)
-     &&  document.documentElement.scrollTop <  pages_rect_bottom[2] - (navigation_bar_rect.height))
-   || (document.documentElement.scrollTop > (pages_rect_top[4] - navigation_bar_rect.height)
-      &&  document.documentElement.scrollTop <  pages_rect_bottom[4] - (navigation_bar_rect.height))){
+  if ((document.documentElement.scrollTop > (pages_rect_top[1] - navigation_bar_rect.height)
+     &&  document.documentElement.scrollTop <  pages_rect_bottom[1] - (navigation_bar_rect.height))
+   || (document.documentElement.scrollTop > (pages_rect_top[3] - navigation_bar_rect.height)
+      &&  document.documentElement.scrollTop <  pages_rect_bottom[3] - (navigation_bar_rect.height))){
     document.getElementsByClassName("navigation-bar")[0].classList.add("different_color");
     document.getElementsByClassName('logo')[0].classList.add("different_color");
   } else{
@@ -133,70 +150,70 @@ function scrollingFunction() {
   }
 }
 
-var intro = document.getElementsByClassName('intro')[0];
-var intro1 = document.getElementsByClassName('intro1')[0];
+// var intro = document.getElementsByClassName('intro')[0];
+// var intro1 = document.getElementsByClassName('intro1')[0];
 
-intro.classList.add("display");
-var delay = setTimeout(loop, 2000);
-
-
-first_intro = true;
-bool = true;
+// intro.classList.add("display");
+// var delay = setTimeout(loop, 2000);
 
 
-var k = 4;
-var j = 0;
+// first_intro = true;
+// bool = true;
 
-function loop(){
-  if (k == 0){
-    if (first_intro){
-      if (j == 0){
-        setTimeout(loop, 1950);
-        j += 1;
-        return null;
-      }
-      j = 0;
-      intro.classList.remove("display");
-      intro1.classList.add("display");
-      k = 4;
-      first_intro = false;
-      setTimeout(loop, 2000);
-      return null;
-    } else {
 
-      if (j == 0){
-        setTimeout(loop, 1950);
-        j += 1;
-        return null;
-      }
-      j = 0;
-      intro.classList.add("display");
-      intro1.classList.remove("display");
-      k = 4;
-      first_intro = true;
-      setTimeout(loop, 2000);
-    }
-    return null;
-  }
-  if (first_intro){
-      if (bool){
-            intro.classList.add("blinker");
-            bool = false;
-        } else {
-          intro.classList.remove("blinker");
-          bool = true;
-        }
-        k -= 1;
-        setTimeout(loop, 500);
-  } else {
-      if (bool){
-            intro1.classList.add("blinker");
-            bool = false;
-        } else {
-          intro1.classList.remove("blinker");
-          bool = true;
-        }
-        k -= 1;
-        setTimeout(loop, 500);
-  }
-}
+// var k = 4;
+// var j = 0;
+
+// function loop(){
+//   if (k == 0){
+//     if (first_intro){
+//       if (j == 0){
+//         setTimeout(loop, 1950);
+//         j += 1;
+//         return null;
+//       }
+//       j = 0;
+//       intro.classList.remove("display");
+//       intro1.classList.add("display");
+//       k = 4;
+//       first_intro = false;
+//       setTimeout(loop, 2000);
+//       return null;
+//     } else {
+
+//       if (j == 0){
+//         setTimeout(loop, 1950);
+//         j += 1;
+//         return null;
+//       }
+//       j = 0;
+//       intro.classList.add("display");
+//       intro1.classList.remove("display");
+//       k = 4;
+//       first_intro = true;
+//       setTimeout(loop, 2000);
+//     }
+//     return null;
+//   }
+//   if (first_intro){
+//       if (bool){
+//             intro.classList.add("blinker");
+//             bool = false;
+//         } else {
+//           intro.classList.remove("blinker");
+//           bool = true;
+//         }
+//         k -= 1;
+//         setTimeout(loop, 500);
+//   } else {
+//       if (bool){
+//             intro1.classList.add("blinker");
+//             bool = false;
+//         } else {
+//           intro1.classList.remove("blinker");
+//           bool = true;
+//         }
+//         k -= 1;
+//         setTimeout(loop, 500);
+//   }
+// }
